@@ -133,7 +133,7 @@ exports.resolvers = {
     },
     signUpUser: async (parent, { data }, { User }, info) => {
       const { username, email, password } = data;
-      console.log("herer");
+
       const user = await User.findOne({ username });
 
       if (user) {

@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+const path = require("path");
 require("dotenv").config({ path: "variables.env" });
 const bodyParser = require("body-parser");
 const Song = require("./models/Song.js");
