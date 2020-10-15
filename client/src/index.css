@@ -1,0 +1,823 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/** SignIn **/
+
+.signIn {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.signIn .left {
+  flex: 1 1 60rem;
+  background: #2d46b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Raleway";
+  font-weight: 500;
+  text-align: center;
+}
+
+.left h1 {
+  line-height: 60px;
+  font-size: 40px;
+}
+
+.signIn .left .orange {
+  color: orange;
+}
+
+.signIn .right {
+  flex: 1 1 60rem;
+  background: #18ad4c;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway";
+  padding-top: 70px;
+}
+
+.right form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form button {
+  padding: 11px;
+  cursor: pointer;
+  margin: 1rem auto;
+  background: orange;
+  border: none;
+  width: 60%;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.right form .form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+form .form-input input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #c4c4c4;
+  padding: 1rem;
+  font-family: "Raleway";
+
+  font-size: 0.875rem;
+}
+
+form .form-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: white;
+}
+
+/** SignIn **/
+
+/** Navbar **/
+
+.container {
+  max-width: 1300px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  font-family: "Raleway";
+  background: black;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.7s ease-in;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.26);
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-inner .brand a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #20c258;
+  font-family: "Raleway";
+  text-decoration: none;
+}
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+}
+
+.navbar-link a:hover {
+  color: #20c258;
+}
+
+.auth .navbar-link a {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.auth .navbar-link a:hover {
+  color: #20c258;
+}
+
+.auth .navbar-link button {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: "Raleway";
+}
+.navbar-link a .nav-icon {
+  margin-right: 8px;
+}
+
+/** Navbar **/
+/** Footer **/
+
+.footer {
+  background: black;
+  font-family: "Raleway";
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.inner-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-footer span {
+  font-weight: 600;
+}
+
+.left-footer {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.right-footer {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+/** Footer **/
+
+/** Home **/
+
+.home {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero {
+  width: 50%;
+  margin-left: 2rem;
+  font-family: "Raleway";
+}
+
+.hero h5 {
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+.hero h1 {
+  font-size: 70px;
+}
+
+.hero p {
+  width: 70%;
+  line-height: 2rem;
+}
+
+.hero a {
+  display: block;
+  padding: 1rem;
+  width: 80px;
+  text-decoration: none;
+  background: #20c258;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.hero a:hover {
+  background: black;
+  color: #20c258;
+}
+
+.home img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+}
+
+/** Home **/
+
+/** Posts **/
+
+.posts {
+  min-height: 100vh;
+  background: #2d46b9;
+}
+
+.abs-images .left-shape {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  top: 100px;
+}
+
+.abs-images .right-shape {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  top: 50px;
+}
+
+.posts-inner {
+  padding: 3rem;
+}
+
+.posts-inner h1 {
+  text-align: center;
+  font-family: "Raleway";
+}
+
+.post-list .song-card {
+  font-family: "Raleway";
+  width: 60%;
+  margin: 2rem auto 0 auto;
+
+  display: flex;
+  padding: 16px;
+  border-radius: 5px;
+  background: white;
+}
+
+.song-card .player {
+  flex: 1;
+}
+
+.song-card .info {
+  flex: 1;
+  height: 100%;
+}
+
+.info .user {
+  display: flex;
+  justify-content: space-between;
+}
+.song-card .info .user h4 {
+  font-size: 0.8rem;
+}
+
+.user a {
+  text-decoration: none;
+  color: #2d46b9;
+}
+
+.info .text {
+  display: flex;
+  flex-direction: column;
+}
+.text h2 {
+  margin-top: 1rem;
+}
+
+.info .text a {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #20c258;
+  font-weight: 500;
+}
+
+.date-likes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-likes h3 {
+  font-size: 1rem;
+  align-self: flex-end;
+}
+
+/** Posts **/
+
+/** Song **/
+
+.song {
+  width: 100%;
+  min-height: 100vh;
+  background: #2d46b9;
+  padding: 1rem 0 1rem 0;
+}
+
+.song-inner {
+  margin-top: 2rem;
+}
+
+.song-container .player {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.song-info {
+  font-family: "Raleway";
+  margin-top: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.song-info .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top .song-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.top .likes {
+  font-size: 1.2rem;
+}
+
+.bottom .date {
+  font-size: 1rem;
+  text-align: right;
+}
+.song-info .bottom {
+  margin-top: 1rem;
+}
+.song-info .bottom h1 {
+  font-size: 1rem;
+}
+
+.bottom button {
+  width: 90px;
+  height: 40px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.bottom h2 {
+  margin-bottom: 1rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.bottom a span {
+  color: #20c258;
+}
+
+button:hover {
+  color: #20c258;
+}
+
+.bottom .like {
+  background: #20c258;
+  margin-right: 1rem;
+}
+
+.like.unlike {
+  background: crimson;
+}
+.like:hover {
+  color: black;
+}
+
+.comment-container {
+  width: 100%;
+  min-height: 200px;
+  background: white;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-family: "Oswald";
+  border-radius: 10px;
+}
+.comment-container h1 {
+  font-size: 1.3rem;
+}
+
+.comment-container .comment {
+}
+
+.comment-container .user-comment {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.user-comment .icon {
+  width: 50px;
+  height: 50px;
+}
+
+.icon .ic {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-text {
+  flex: 3;
+  margin-left: 1rem;
+}
+
+.comment-delete {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.comment-delete button {
+  background-color: crimson;
+  cursor: pointer;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.comment-text h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.comment-text p {
+  margin: 0;
+}
+
+.comment-text h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/** Song **/
+
+/** Addsong **/
+
+.add-song {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Raleway";
+  background: #2d46b9;
+}
+
+.add-song-innner {
+}
+
+.form-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h1 {
+  color: #20c258;
+}
+
+.form-container form {
+  width: 400px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: white;
+  border-radius: 5px;
+}
+.song-form .form-input {
+  margin-top: 1rem;
+}
+
+.song-form .form-input input {
+  padding: 0.5rem;
+}
+
+.song-form .form-input .textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.7rem;
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.form-container form label {
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-container button {
+  background: black;
+  font-weight: 500;
+}
+
+/** Addsong **/
+
+/**  Search **/
+.search {
+  background: #2d46b9;
+  padding: 1px;
+}
+.search-inner {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.search-form {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.sf {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sf input {
+  width: 70%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.sf button {
+  width: 20%;
+  background: black;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.search-results {
+  margin-top: 2rem;
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-card {
+  width: 45%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.151);
+  margin-top: 1rem;
+  display: flex;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.search-card-video {
+  flex: 1;
+}
+
+.search-card-text {
+  flex: 1;
+  font-family: "Raleway";
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-card-text .edit-delete {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-delete button {
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-delete button .icon {
+  margin-right: 5px;
+  font-size: 1.1rem;
+}
+
+.edit-delete .delete {
+  background: rgb(209, 56, 56);
+}
+.edit-delete .edit {
+  background: #20c258;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.edit-delete .edit .icon {
+  margin-right: 5px;
+  font-size: 1.1rem;
+}
+
+.search-card-text h2 {
+  font-size: 1.1rem;
+}
+
+.search-card-text a {
+  text-decoration: none;
+  color: #20c258;
+  padding: 0.1rem;
+  width: 40%;
+}
+
+.search-card-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/**  Search **/
+
+/** USerlikes **/
+.userlikes {
+  padding-top: 1rem;
+
+  font-family: "Raleway";
+}
+
+.userlikes-text h1 {
+  color: #24dd65;
+  text-align: center;
+}
+
+/** USerlikes **/
+
+.profile {
+  min-height: 100vh;
+  background: #2d46b9;
+}
+
+/** User Songs **/
+
+.userposts {
+  padding-top: 1rem;
+
+  font-family: "Raleway";
+}
+
+.userposts h1 {
+  color: #24dd65;
+  text-align: center;
+}
+/** User Songs **/
+
+.modal {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.384);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.comment-form {
+  width: 400px;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  font-family: "Raleway";
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.164);
+}
+
+.comment-form .close-btn {
+  margin-left: auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.comment-form h1 {
+  font-size: 1.2rem;
+}
+
+.comment-form form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.comment-form form textarea {
+  height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  padding: 1rem;
+  font-family: "Raleway";
+  font-size: 1.1rem;
+}
+
+.comment-form form button {
+  background: black;
+}
