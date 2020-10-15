@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-const path = require("path");
 require("dotenv").config({ path: "variables.env" });
 const bodyParser = require("body-parser");
 const Song = require("./models/Song.js");
@@ -68,7 +67,7 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
     useNewUrlParser: true,
-    useFindAndModify: false,
+    useFindAndModify: true,
   })
   .then(() => {
     console.log("db connected");
@@ -79,7 +78,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sednFİle(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 

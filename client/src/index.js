@@ -23,7 +23,7 @@ import EditSong from "./Components/editSong";
 import "./index.css";
 
 const httpLink = createHttpLink({
-  uri: "https://underrated.herokuapp.com/graphql",
+  uri: "http://localhost:4444/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
