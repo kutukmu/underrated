@@ -133,37 +133,45 @@ exports.resolvers = {
     },
     signUpUser: async (parent, { data }, { User }, info) => {
       const { username, email, password } = data;
+      console.log(here);
+      try {
+        const user = await User.findOne({ username });
+        if (user) {
+          throw new Error("user alreay exist");
+        }
 
-      const user = await User.findOne({ username });
-      if (user) {
-        throw new Error("user alreay exist");
-      }
+        const newuser = await new User({
+          username,
+          email,
+          password,
+        }).save();
 
-      const newuser = await new User({
-        username,
-        email,
-        password,
-      }).save();
+        const hashed = await bcrypt.hash(newuser.password, 10);
+        newuser.password = hashed;
 
-      const hashed = await bcrypt.hash(newuser.password, 10);
-      newuser.password = hashed;
+        await newuser.save();
 
-      await newuser.save();
+        const url =
+          "https://underrated.herokuapp.com/api/confirmation/" + newuser._id;
 
-      const url = "http://localhost:4444/api/confirmation/" + newuser._id;
-
-      await transporter.sendMail({
-        from: '"UnderRated👻" <pastelpack0@gmail.com>', // sender address
-        to: email, // list of receivers
-        subject: "✔ Email Confirmation", // Subject line
-        html: `<h1>Thank you for Signing up to UnderRated, please click the link down below to verify email</h1>
+        console.log(here);
+        await transporter.sendMail({
+          from: '"UnderRated👻" <pastelpack0@gmail.com>', // sender address
+          to: email, // list of receivers
+          subject: "✔ Email Confirmation", // Subject line
+          html: `<h1>Thank you for Signing up to UnderRated, please click the link down below to verify email</h1>
       <a href="${url}">Confirm Email</a>`, // html body
-      });
+        });
 
-      return {
-        token: createToken(newuser, process.env.JWT_SECRET, "24h"),
-        user: newuser,
-      };
+        console.log(here);
+
+        return {
+          token: createToken(newuser, process.env.JWT_SECRET, "24h"),
+          user: newuser,
+        };
+      } catch (error) {
+        console.log(error);
+      }
     },
 
     signInUser: async (parent, { data }, { User }, info) => {
