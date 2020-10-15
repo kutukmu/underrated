@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+const path = require("path");
 require("dotenv").config({ path: "variables.env" });
 const bodyParser = require("body-parser");
 const Song = require("./models/Song.js");
@@ -73,6 +74,14 @@ mongoose
     console.log("db connected");
   })
   .catch((err) => console.log(err));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 const PORT = process.env.PORT || 4444;
 
